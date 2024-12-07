@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/softswiss-test/static/css/main.f2694016.css",
-    "main.js": "/softswiss-test/static/js/main.0d163b89.js",
+    "main.js": "/softswiss-test/static/js/main.4ee8a800.js",
     "static/media/rocket.png": "/softswiss-test/static/media/rocket.d6b52eb7ba346cf335e7.png",
     "static/media/logo.svg": "/softswiss-test/static/media/logo.f4153131d3955bdfa609912a9f3b5caf.svg",
     "static/media/cart-hover.svg": "/softswiss-test/static/media/cart-hover.130703b7b0cf9871648ffbe073cd6187.svg",
     "static/media/cart.svg": "/softswiss-test/static/media/cart.5fdc8f10c95015c32240615c1ad34fbf.svg",
     "index.html": "/softswiss-test/index.html",
     "main.f2694016.css.map": "/softswiss-test/static/css/main.f2694016.css.map",
-    "main.0d163b89.js.map": "/softswiss-test/static/js/main.0d163b89.js.map"
+    "main.4ee8a800.js.map": "/softswiss-test/static/js/main.4ee8a800.js.map"
   },
   "entrypoints": [
     "static/css/main.f2694016.css",
-    "static/js/main.0d163b89.js"
+    "static/js/main.4ee8a800.js"
   ]
 }
