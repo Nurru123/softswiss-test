@@ -1,0 +1,96 @@
+@use '../../styles/variables' as *;
+
+.info {
+
+    input[type="checkbox"] {
+        display: none;
+
+        &:not(:checked)~.info__text .info__text_more {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        &:checked~.info__text .info__text_more {
+            max-height: unset;
+            opacity: 1;
+        }
+
+        :checked~.info__text+.info__btn::before {
+            content: "Hide text";
+        }
+    }
+
+    &__title {
+        font: 800 18px/22px $font-family;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font: 700 14px/17px $font-family;
+        opacity: 60%;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        &_more {
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+    }
+
+    &__btn {
+        font: 800 14px/17px $font-family;
+        color: $primary-color;
+        transition: .3s ease;
+
+        &:hover {
+            opacity: 60%;
+        }
+
+        &::before {
+            content: "Read more";
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .info {
+        .wrapper {
+            width: calc(100% - 56px);
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 13px;
+        }
+
+        &__text,
+        &__btn {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .info {
+        .wrapper {
+            width: calc(100% - 80px);
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 17px;
+        }
+
+        &__text,
+        &__btn {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__text~&__btn {
+            margin-top: 17px;
+        }
+    }
+}

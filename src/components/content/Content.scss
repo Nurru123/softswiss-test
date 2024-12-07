@@ -1,0 +1,6 @@
+@use '../../styles/variables' as *;
+
+.content {
+    background-color: $bg-color;
+    flex: 1;
+}

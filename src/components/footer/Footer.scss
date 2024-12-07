@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+    @include flex-center;
+    background-color: $dark-color;
+    padding: 20px;
+    max-height: 127px;
+
+    &__container {
+        @include flex-center;
+        flex-direction: column;
+        font: 800 18px/28px $font-family;
+        letter-spacing: -0.008em;
+        color: $primary-color;
+    }
+
+    &__icon {
+        width: 34px;
+        margin-bottom: 11px;
+        margin-right: 6px;
+        transform: rotate(5deg);
+    }
+}

@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+%learn-more-btn {
+    @include flex-center;
+    font: 700 16px/19px $font-family;
+    padding: 0 38px;
+    width: fit-content;
+    height: 33px;
+    color: $primary-color !important;
+    border: 2px solid;
+    border-radius: 100px;
+    background-color: transparent;
+    transition: .3s ease;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.learn-more {
+    @extend %learn-more-btn;
+}
+
+@media screen and (min-width: 1100px) {
+    %learn-more-btn {
+        font-size: 22px;
+        font-weight: 26px;
+        height: 54px;
+    }
+}

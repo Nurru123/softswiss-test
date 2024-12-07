@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+    @include flex-center;
+    height: 48px;
+    background-color: $dark-color;
+
+    &__container {
+        @include flex-between;
+        width: 100%;
+    }
+
+    &__logo svg {
+        height: 24px;
+        width: 71px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .header {
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .header__logo svg {
+        height: 35px;
+        width: 104px;
+    }
+}

@@ -1,0 +1,39 @@
+@use '../../styles/mixins' as *;
+
+.offers {
+    &__container {
+        @include flex-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        transition: .3s ease;
+    }
+
+    &__title {
+        font: 800 18px/22px 'Lato', sans-serif;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .offers {
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .offers {
+
+        &__container {
+            gap: 40px;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@use '../learMoreBtn/LearnMoreBtn.scss' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.banner {
+    overflow: hidden;
+    height: 451px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .wrapper {
+        width: calc(100% - 68px);
+        height: 100%;
+        padding: 44px 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        img {
+            max-width: unset;
+            width: 327px;
+            position: absolute;
+            top: -116px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: .3s ease;
+        }
+    }
+
+    &__container {
+        @include flex-between;
+        flex-direction: column;
+        gap: 17px;
+        max-width: 300px;
+        z-index: 5;
+    }
+
+    &__title {
+        font: 800 36px/1 $font-family;
+
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    &__subtitle {
+        font: 800 16px/19px $font-family;
+
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.learn-more_primary {
+    @extend %learn-more-btn;
+    color: $dark-color !important;
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+
+@media screen and (min-width: 640px) {
+    .banner {
+        height: 420px;
+
+        .wrapper {
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+                top: 50%;
+                left: unset;
+                right: -137px;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__container {
+            align-items: flex-start;
+            gap: 22px;
+            max-width: 415px;
+            margin-bottom: 28px;
+        }
+
+        &__title {
+            font-size: 48px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
+
+    .learn-more_primary {
+        font-size: 22px;
+        font-weight: 26px;
+        height: 54px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .banner {
+        height: 490px;
+
+        .wrapper {
+            width: calc(100% - 80px);
+
+            img {
+                width: 360px;
+                top: 53%;
+                right: -22px;
+            }
+        }
+
+        &__container {
+            max-width: 690px;
+        }
+
+        &__title {
+            font-size: 72px;
+        }
+
+        &__subtitle {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+}
