@@ -1,7 +1,7 @@
 {
   "name": "softswiss-test",
   "version": "0.1.0",
-  "homepage": "https://softswiss-test.github.io",
+  "homepage": "https://github.com/Nurru123/softswiss-test",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
